@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waterly – a drinking schedule that fits your day</title>
+<meta name="description" content="Waterly is an Android app that tracks the glasses of water you drink and spreads the rest of your daily goal across your waking hours.">
+<style>
+  :root {
+    --bg: #12100e;
+    --bg2: #1a1613;
+    --ink: #f1e7d3;
+    --muted: #a2978a;
+    --water: #4fc1c9;
+    --water-deep: #1d7c8a;
+    --line: rgba(241, 231, 211, .14);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: radial-gradient(120% 80% at 100% 0%, rgba(255, 106, 61, .16), transparent 55%), var(--bg);
+    color: var(--ink);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--water); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--water); outline-offset: 3px; border-radius: 2px; }
+  main { max-width: 44rem; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
+
+  .hero { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
+  h1 {
+    margin: 0;
+    font: italic 400 clamp(3.2rem, 14vw, 5.6rem)/1 Georgia, "Times New Roman", serif;
+    letter-spacing: -.02em;
+  }
+  .lede { margin: 1.1rem 0 0; font-size: 1.2rem; color: var(--ink); max-width: 26ch; }
+
+  .glass { width: 112px; height: 150px; flex: none; }
+  .glass .level { animation: sway 5s ease-in-out infinite alternate; }
+  @keyframes sway { from { transform: translateX(-6px); } to { transform: translateX(6px); } }
+  @media (prefers-reduced-motion: reduce) { .glass .level { animation: none; } }
+
+  h2 { margin: 3.2rem 0 .6rem; font: 600 1.25rem/1.3 Georgia, "Times New Roman", serif; }
+  p { margin: 0 0 1rem; max-width: 62ch; }
+  .muted { color: var(--muted); }
+  dl { margin: 1.4rem 0 0; border-top: 1px solid var(--line); }
+  dl div { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+  dt { font-weight: 600; }
+  dd { margin: 0; color: #d8cdb9; }
+  @media (max-width: 34rem) {
+    .hero { grid-template-columns: 1fr; }
+    dl div { grid-template-columns: 1fr; gap: .15rem; }
+  }
+  footer { margin-top: 4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; }
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div>
+      <h1>Waterly</h1>
+      <p class="lede">Drink water on a schedule that fits your day.</p>
+    </div>
+    <svg class="glass" viewBox="0 0 112 150" role="img" aria-label="A glass of water">
+      <defs>
+        <clipPath id="inside"><path d="M14 8 H98 L90 138 Q89 144 83 144 H29 Q23 144 22 138 Z"/></clipPath>
+        <linearGradient id="w" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#4fc1c9"/><stop offset="1" stop-color="#1d7c8a"/>
+        </linearGradient>
+      </defs>
+      <g clip-path="url(#inside)">
+        <g class="level">
+          <path d="M-20 62 Q 8 52 36 62 T 92 62 T 148 62 V 160 H -20 Z" fill="url(#w)"/>
+        </g>
+      </g>
+      <path d="M14 8 H98 L90 138 Q89 144 83 144 H29 Q23 144 22 138 Z" fill="none" stroke="#f1e7d3" stroke-opacity=".55" stroke-width="2.5" stroke-linejoin="round"/>
+    </svg>
+  </header>
+
+  <h2>What it does</h2>
+  <p>Waterly is an Android app for people who forget to drink water. You tap once for every glass you finish. Waterly counts it against your daily goal and tells you when the next glass is due.</p>
+
+  <dl>
+    <div><dt>Count glasses</dt><dd>One tap logs a glass (220 ml by default). A quick confirmation stops accidental taps.</dd></div>
+    <div><dt>Plan the day</dt><dd>On your first drink, tell Waterly when you will sleep. It spreads the remaining glasses across the hours you are awake and re-plans after every glass.</dd></div>
+    <div><dt>Get reminded</dt><dd>Notifications at each drink time, or a louder alarm that plays an audio file you pick from your phone.</dd></div>
+    <div><dt>Keep a streak</dt><dd>One tap a day builds a streak.</dd></div>
+    <div><dt>Use the widget</dt><dd>Log a glass or mark your streak from the home screen without opening the app.</dd></div>
+    <div><dt>Back up</dt><dd>Optionally save your streak and history to your own Google Drive so a cleared app or a new phone doesn’t reset it.</dd></div>
+  </dl>
+
+  <h2>Your data stays yours</h2>
+  <p>Everything Waterly records lives on your phone. If you connect Google Drive, a backup is written to a hidden folder that only Waterly can open. There is no Waterly account, no server and no advertising. The <a href="privacy.html">privacy policy</a> has the details.</p>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:zorex444x@gmail.com">zorex444x@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>

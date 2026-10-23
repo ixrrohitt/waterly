@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waterly privacy policy</title>
+<meta name="description" content="What data the Waterly Android app stores, where it is kept, and how to remove it.">
+<style>
+  :root {
+    --bg: #12100e;
+    --ink: #f1e7d3;
+    --muted: #a2978a;
+    --water: #4fc1c9;
+    --line: rgba(241, 231, 211, .14);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: radial-gradient(120% 70% at 100% 0%, rgba(255, 106, 61, .12), transparent 55%), var(--bg);
+    color: var(--ink);
+    font: 17px/1.7 Georgia, "Times New Roman", serif;
+  }
+  a { color: var(--water); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--water); outline-offset: 3px; border-radius: 2px; }
+  main { max-width: 42rem; margin: 0 auto; padding: 3.5rem 1.5rem 3rem; }
+  .back { font: 15px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  h1 { margin: 1.4rem 0 .3rem; font: italic 400 clamp(2.4rem, 9vw, 3.4rem)/1.1 Georgia, serif; letter-spacing: -.01em; }
+  .meta { margin: 0 0 2.2rem; color: var(--muted); font: 15px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  h2 { margin: 2.4rem 0 .5rem; font: 600 1.2rem/1.3 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  p, li { max-width: 64ch; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .45rem; }
+  table { width: 100%; border-collapse: collapse; margin: .6rem 0 1rem; font: 15.5px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  th, td { text-align: left; vertical-align: top; padding: .65rem .8rem .65rem 0; border-bottom: 1px solid var(--line); }
+  th { font-weight: 600; width: 38%; }
+  .scroll { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="index.html">Back to Waterly</a>
+  <h1>Privacy policy</h1>
+  <p class="meta">Last updated 23 October 2026</p>
+
+  <p>Waterly is an Android app that tracks how much water you drink and reminds you to drink more. This page explains what the app stores, where it is stored, and how you can remove it. The short version: your data stays on your phone, and the only time it leaves is when you choose to back it up to your own Google Drive.</p>
+
+  <h2>What Waterly stores on your phone</h2>
+  <ul>
+    <li>The glasses you log, with the time of each one, and the daily totals of past days.</li>
+    <li>Your settings: daily goal, glass size, reminder and alarm switches, and the sleep time you enter each day.</li>
+    <li>Your streak days.</li>
+    <li>If you choose your own alarm sound, the location of that audio file on your phone and its file name. The audio itself is read only to play it and is never copied or uploaded.</li>
+  </ul>
+  <p>This data is kept in the app’s private storage. Clearing the app’s data or uninstalling it deletes it.</p>
+
+  <h2>Google sign-in and Google Drive</h2>
+  <p>Google Drive backup is optional and off until you tap “Connect Google Drive” in the app. When you connect, Waterly asks for one permission: access to its own hidden application-data folder in your Drive (<code>drive.appdata</code>). With it, Waterly can:</p>
+  <ul>
+    <li>write one small backup file containing the data listed above;</li>
+    <li>read that file back when you restore on a new phone or after clearing the app.</li>
+  </ul>
+  <p>Waterly cannot see, list or change any of your other Drive files, and it does not read your name, email address, contacts or any other Google account information. The hidden folder is reachable only by Waterly. With auto-backup on, the file is updated when you leave the app and when you log a glass or mark your streak.</p>
+  <p>Waterly’s use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>What Waterly does not do</h2>
+  <ul>
+    <li>It has no accounts, no servers of its own and no analytics.</li>
+    <li>It shows no ads and contains no advertising or tracking libraries.</li>
+    <li>It does not sell, share or transfer your data to anyone.</li>
+    <li>It does not collect your location, contacts, photos or device identifiers.</li>
+  </ul>
+
+  <h2>Permissions the app asks for</h2>
+  <div class="scroll">
+    <table>
+      <tr><th>Notifications</th><td>To show drink reminders.</td></tr>
+      <tr><th>Alarms and reminders</th><td>To fire a reminder at the exact time it is due.</td></tr>
+      <tr><th>Foreground service (media playback)</th><td>To play your alarm sound while it rings.</td></tr>
+      <tr><th>Run at startup</th><td>To restore your next reminder after the phone restarts.</td></tr>
+      <tr><th>Internet</th><td>Used only for the optional Google Drive backup.</td></tr>
+    </table>
+  </div>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li><strong>Stop backups:</strong> in the app, open Settings, then Cloud backup, then Off.</li>
+    <li><strong>Revoke Google access:</strong> visit your Google Account’s “Third-party apps &amp; services” page and remove Waterly.</li>
+    <li><strong>Delete the Drive backup:</strong> in Google Drive settings, open Manage apps, find Waterly and choose to delete its hidden app data.</li>
+    <li><strong>Delete everything on the phone:</strong> clear the app’s storage or uninstall it.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Waterly does not ask for personal information and is not directed at children under 13.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If the app’s handling of data changes, this page will be updated and the date at the top will change.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or removal requests: <a href="mailto:zorex444x@gmail.com">zorex444x@gmail.com</a></p>
+</main>
+</body>
+</html>
